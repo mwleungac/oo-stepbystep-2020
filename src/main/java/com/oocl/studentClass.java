@@ -63,4 +63,11 @@ public class studentClass {
           return null;
     }
 
+    public String leaderAssignedToClass (Student student){
+        this.setClassLeader(student);
+        teacher.welcomeLeader(student, this);
+
+        return null;
+    }
+
 }
