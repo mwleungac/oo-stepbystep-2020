@@ -48,23 +48,19 @@ public class studentClass {
     }
 
 
-    public String addToClass(Student student) {
-        if(!allStudent.contains(student)) {
-            allStudent.add(student);
-            teacher.welcome(student, this);
-        }
+    public String addToClass(final Student student) {
+        if(!allStudent.contains(student)) {         //add student to studentClass
+          allStudent.forEach(otherStudent -> otherStudent.welcome(student, this));
 
-       /* if (student.getClassNo().toString() != name) {
+            teacher.welcome(student, this);
             this.allStudent.add(student);
-            teacher.welcome(student, this);
-        }*/
-        // allStudent.add(student);        //add student to studentClass
-
+        }
           return null;
     }
 
     public String leaderAssignedToClass (Student student){
         this.setClassLeader(student);
+        allStudent.forEach(otherStudent -> otherStudent.welcome(student, this));
         teacher.welcomeLeader(student, this);
 
         return null;

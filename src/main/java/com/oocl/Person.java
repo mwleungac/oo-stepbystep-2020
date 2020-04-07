@@ -11,7 +11,7 @@ public class Person {
         return cls;
     }
 
-    public void setClassNo(studentClass classNo) {
+    public void setClassNo(String classNo) {
         this.cls = cls;
     }
 

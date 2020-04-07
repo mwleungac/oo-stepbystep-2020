@@ -6,7 +6,6 @@ import java.util.List;
 public class Teacher extends Person{
 
     private String welcomeMessage;
-    private String welcomeMessageWhenNewLeader;
 
     private List<studentClass> classesToTeach = new ArrayList<studentClass>(); // a teacher can teach many classes
 
@@ -29,7 +28,7 @@ public class Teacher extends Person{
     }
 
     public String getMessage() {
-    return welcomeMessageWhenNewLeader;
+    return welcomeMessage;
 
     }
 
@@ -40,7 +39,7 @@ public class Teacher extends Person{
     }
 
     public void welcomeLeader(Student student, studentClass studentClass) {
-        welcomeMessageWhenNewLeader = introduce() +
+        welcomeMessage = introduce() +
                 String.format("%s is the leader of Class %s", student.getName(),studentClass.getName());
     }
 }
