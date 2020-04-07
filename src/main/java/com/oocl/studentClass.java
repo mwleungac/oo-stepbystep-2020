@@ -33,8 +33,9 @@ public class studentClass {
     }
 
     public void setClassLeader(Student classLeader) {
-        if(allStudent.contains(classLeader)) {      // student in class can be leader
+        if (allStudent.contains(classLeader)) {      // student in class can be leader
             this.classLeader = classLeader;
+
         }
     }
 
@@ -47,9 +48,19 @@ public class studentClass {
     }
 
 
-    public String addToClass(Student student){
-        allStudent.add(student);        //add student to studentClass
+    public String addToClass(Student student) {
+        if(!allStudent.contains(student)) {
+            allStudent.add(student);
+            teacher.welcome(student, this);
+        }
 
-        return null;
+       /* if (student.getClassNo().toString() != name) {
+            this.allStudent.add(student);
+            teacher.welcome(student, this);
+        }*/
+        // allStudent.add(student);        //add student to studentClass
+
+          return null;
     }
+
 }

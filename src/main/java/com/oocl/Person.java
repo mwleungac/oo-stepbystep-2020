@@ -34,6 +34,6 @@ public class Person {
     }
 
     public String introduce(){
-        return String.format("My name is %s. I am %s years old.\n", name, age);
+        return String.format("My name is %s. I am %s years old.", name, age);
     }
 }

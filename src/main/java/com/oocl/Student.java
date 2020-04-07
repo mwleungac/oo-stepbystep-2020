@@ -18,7 +18,7 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-           return String.format("My name is %s. I am %s years old. I am a student of class %s. Coding for the glory of OOCL.\n", this.getName(), this.getAge(),this.getClassNo().getName());
+           return String.format("My name is %s. I am %s years old. I am a student of class %s. Coding for the glory of OOCL.", this.getName(), this.getAge(),this.getClassNo().getName());
     }
 
     public void toJoinClass(studentClass cls){  //add student to studentClass
