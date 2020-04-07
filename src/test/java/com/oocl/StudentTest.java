@@ -8,11 +8,15 @@ import static org.junit.Assert.*;
 public class StudentTest {
     @Test
     public void display_student_line() {
+
         Student student = new Student();
-        student.setName("Tom");
         student.setAge(18);
-        student.setStudentClassNum(2);
-        student.setClassLeader(false);
+        student.setName("Tom");
+
+        studentClass cls = new studentClass();
+        cls.setName("2");
+        student.setClassNo(cls);    //pass setName to Student class
+
 
         System.out.println(student.introduce());
 
